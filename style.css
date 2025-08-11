@@ -60,3 +60,48 @@ button:hover {
     font-size: 20px;
     margin-top: 20px;
 }
+.case-items img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-right: 2px solid #333;
+    margin-right: 10px; /* Buraya boşluk ekledim */
+}
+
+/* Kazanan kutusu */
+#winner-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.7);
+    background: rgba(30, 30, 30, 0.85);
+    padding: 25px 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 87, 34, 0.8);
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+#winner-box.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+#winner-box img {
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 0 20px rgba(255, 87, 34, 0.7);
+}
