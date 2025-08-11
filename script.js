@@ -80,6 +80,24 @@ function findWinner() {
     });
 
     if (closest) {
-        resultText.textContent = "Kazandığın item: " + closest.src.split("/").pop().replace(".jpg", "");
+        const winnerBox = document.getElementById("winner-box");
+        const winnerImg = document.getElementById("winner-img");
+        const winnerName = document.getElementById("winner-name");
+
+        const itemName = closest.src.split("/").pop().replace(".jpg", "");
+
+        winnerImg.src = closest.src;
+        winnerName.textContent = "Kazandığın item: " + itemName;
+
+        // Kutuyu göster ve animasyon ver
+        winnerBox.classList.add("show");
+
+        // İstersen 5 saniye sonra otomatik gizle
+        setTimeout(() => {
+            winnerBox.classList.remove("show");
+        }, 5000);
+
+        // Sonucu metin olarak da altta göstermek istersen kaldırabilirsin:
+        resultText.textContent = "";
     }
-}
+}(".case-items img");
