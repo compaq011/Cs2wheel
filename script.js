@@ -55,12 +55,11 @@ openCaseBtn.addEventListener("click", () => {
         }
 
         if (speed <= minSpeed) {
-            clearInterval(interval);
-            rollSound.pause();
-            findWinner();
-        }
-    }, 16);
-});
+    clearInterval(interval);
+    rollSound.pause();
+    rollSound.currentTime = 0;  // müziği başa sar
+    findWinner();
+}
 
 function findWinner() {
     const containerRect = document.querySelector(".case-container").getBoundingClientRect();
