@@ -6,7 +6,7 @@ const items = [
     "Vogue.jpg",
     "Revolution.jpg",
     "Ticket.jpg",
-    "Kilowatt.jpg",
+    "kilowatt.jpg",
     "Dreams.jpg"
 ];
 
